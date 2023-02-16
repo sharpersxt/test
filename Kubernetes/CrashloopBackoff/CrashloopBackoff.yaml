@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crashpod
+  namespace: default
+  labels:
+    app: crashpod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crashpod
+  template:
+    metadata:
+      labels:
+        app: crashpod
+    spec:
+      containers:
+      - name: crash-container
+        image: busybox:latest
+        args:
+        - "/bin/false"
