@@ -1,0 +1,8 @@
+
+CrashloopBackoff ChangeLog
+==========================
+
+0.0.1
+-----
+
+Created Deployment YaML to generate a failing pod.
